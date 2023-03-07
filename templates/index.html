@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+    {% extends 'base.html' %}
+
+{% block content %}
+
 <head>
 	<title>Campus Dash - Home</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -22,20 +26,7 @@
 		</section>
 		<section>
 			<h2>Login</h2>
-			<form action="login.html">
-
-				<label>
-					<input type="radio" name="user_type" value="admin">
-					Admin
-				</label>
-				<label>
-					<input type="radio" name="user_type" value="new_user">
-					New User
-				</label>
-				<label>
-					<input type="radio" name="user_type" value="regular_user" checked>
-					Regular User
-				</label>
+			<form action="{{ url_for('login') }}">
 				<br>
 				<input type="submit" value="Login">
 			</form>
@@ -45,4 +36,5 @@
 		<p>&copy; 2023 Campus Dash, Inc.</p>
 	</footer>
 </body>
+{% endblock %}
 </html>
