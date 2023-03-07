@@ -1,6 +1,48 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Campus Dash - Home</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Campus Dash</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h2>About Campus Dash</h2>
+			<p>Campus Dash is a web application designed to help students manage their college life. With Campus Dash, students can easily organize their schedules, track their grades, and get reminders for important events and deadlines.</p>
+		</section>
+		<section>
+			<h2>Login</h2>
+			<form action="login.html">
 
-{% block content %}
-    <h1>{% block title %} Welcome {% endblock %}</h1>
-    <p>Please <b>Sign Up</b> for new user or <b>Log In</b> if you already have an account </h2>
-{% endblock %}
+				<label>
+					<input type="radio" name="user_type" value="admin">
+					Admin
+				</label>
+				<label>
+					<input type="radio" name="user_type" value="new_user">
+					New User
+				</label>
+				<label>
+					<input type="radio" name="user_type" value="regular_user" checked>
+					Regular User
+				</label>
+				<br>
+				<input type="submit" value="Login">
+			</form>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 Campus Dash, Inc.</p>
+	</footer>
+</body>
+</html>
