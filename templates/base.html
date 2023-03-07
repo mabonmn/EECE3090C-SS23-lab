@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="topnav">
-        <a href="{{ url_for('login') }}">Welcome</a>
+        <a href="{{ url_for('index') }}">Welcome</a>
         <a href="{{ url_for('login') }}">Log In</a>
         <a href="{{ url_for('register') }}">Sign Up</a>
     </div>
@@ -17,9 +17,9 @@
         <div class="alert alert-danger">{{ message }}</div>
     {% endfor %}
     {% block content %} {% endblock %}
-	<footer>
-		<p>&copy; 2023 Campus Dash, Inc.</p>
-	</footer>
+</div>
+<div class = "footer">
+    <p>Author: Alvin Chang</p>
+</div>
 </body>
-</html>
 </html>
