@@ -1,35 +1,51 @@
-{% extends 'base.html' %}
+<!DOCTYPE html> 
+<html><head>
+    <title>Campus Dash</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header>
+      <img src="logo.gif" alt="UC Dash Logo" style="float: right;" width="50" height="50">
+      <h1>Campus Dash (beta)</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="Registration">
+        <h2>Login</h2>
+        <p>Welcome to UC Dash, please register your account. </p>
+		<form>
+          <label for="pass">M Number:</label>
+          <input type="text" id="M" name="M" required="">
+          <br><br>		  
+          <label for="pass">First Name:</label>
+          <input type="text" id="fn" name="fn" required="">
+		  <br><br>
+          <label for="pass">Last Name:</label>
+          <input type="text" id="ln" name="ln" required="">
+          <br><br>
+		  <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required="">
+          <br><br>
+          <label for="pass">Password:</label>
+          <input type="text" id="pass" name="pass" required="">
+          <br><br>
+          <input type="submit" value="Register">
+        </form>
+	  </section>
+     
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email us at <a href="mailto:mabonmn@mail.uc.edu">mabonmn@mail.uc.edu</a> for more information</p>
+      </section>
+    </main>
+    <footer>
+      <p>© Copyright 2023</p>
+    </footer>
+  
 
-{% block content %}
-    <h1>{% block title %} Sign Up {% endblock %}</h1>
-    <form method="post" enctype = "multipart/form-data">
-        <label for="username">Username:</label>
-        <br>
-        <input type="text" name="username"
-               value="{{ request.form['username'] }}"></input>
-        <br>
-        <label for="password">Password:</label>
-        <br>
-        <input type="password" name="password"
-               value="{{ request.form['password'] }}"></input>
-        <br>
-        <label for="firstname">First name:</label>
-        <br>
-        <input type="text" name="firstname"
-               value="{{ request.form['firstname'] }}"></input>
-        <br>
-        <label for="lastname">Last name:</label>
-        <br>
-        <input type="text" name="lastname"
-               value="{{ request.form['lastname'] }}"></input>
-        <br>
-        <label for="email">Email:</label>
-        <br>
-        <input type="email" name="email"
-               value="{{ request.form['email'] }}"></input>
-        <br>
-        <input type = "file" name = "file" />
-        <br>
-        <button type="submit">Sign Up</button>
-    </form>
-{% endblock %}
+</body></html>
