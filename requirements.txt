@@ -1,3 +1,3 @@
-numpy
 flask
-flask-sqlalchemy
+sqlalchemy
+pandas

@@ -1,3 +1,6 @@
+#Mabon Ninan
+#UC Dasec
+
 import sqlite3
 from flask import Flask, request, g, render_template, url_for, flash, redirect, session, send_file
 import os
@@ -116,4 +119,5 @@ def about():
     return render_template('about.html')
 
 if __name__ == '__main__':
-  app.run(debug=True)
+  app.run(debug=True, host='0.0.0.0')
+
